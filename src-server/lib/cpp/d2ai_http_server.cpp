@@ -13,7 +13,7 @@ HttpServer::HttpServer(Controller *controller, int threads)
 
 void HttpServer::start() {
     daemon = MHD_start_daemon(
-            MHD_USE_INTERNAL_POLLING_THREAD,      // flags
+            MHD_USE_POLL_INTERNALLY,              // flags
             controller->getPort(),                // port
             NULL, NULL,                           // accept policy callback + arg
             &HttpServer::callback, this,          // handler callback + cls ptr

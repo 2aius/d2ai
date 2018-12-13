@@ -104,7 +104,7 @@ build/d2ai-passive 4101
 
 ## Performances
 
-Each hero being controlled will send an Observation to the Agent every ~ 150 msec in average. Most of the execution time is spent by CreateHTTPRequest LUA API function call (experiments show that execution time varies in practice from 50 to 400 msec). As the game runs at 30 frames per second, each hero performs an action every ~ 5 frames, or ~ 6 actions per second in average. Note that some actions are 'immediate' (e.g. purchase item, level ability) so a hero can perform many of them at the same time after processing 1 Observation. In an AI vs. AI game, the 10 heroes being controlled will extract a full description of the world (i.e. thousands of variables) every 150 msec, so expect the CPU load to be high.
+Each hero being controlled will send an Observation to the Agent every ~ 130 msec in average. Most of the execution time is spent by CreateHTTPRequest LUA API function call (experiments show that execution time varies in practice from 50 to 400 msec). As the game runs at 30 frames per second, each hero performs an action every ~ 4 frames, or ~ 7 actions per second in average. Note that some actions are 'immediate' (e.g. purchase item, level ability) so a hero can perform many of them at the same time after processing 1 Observation. In an AI vs. AI game, the 10 heroes being controlled will extract a full description of the world (i.e. thousands of variables) every 130 msec, so expect the CPU load to be high.
 
 ## Agent Example
 
